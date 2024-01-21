@@ -118,7 +118,7 @@ const renderComponents = async () => {
       }
     }
 
-    await fs.writeFile(pathToTemplateFile, content, 'utf8');
+    await fs.writeFile(pathToIndexFile, content, 'utf8');
 
     console.log('Render completed!');
   } catch (error) {
@@ -133,8 +133,8 @@ const mainFunc = async () => {
     await createAssetsCopyFolder();
     await copyFilesToAssetsFolder(pathToAssetsFolder, pathToAssetsCopyFolder);
     await mergeCssFiles();
-    await renderComponents();
     await mergeIndexFiles();
+    await renderComponents();
   } catch (error) {
     console.log('Error:', error);
   }
