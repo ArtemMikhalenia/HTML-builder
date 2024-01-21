@@ -19,7 +19,7 @@ const mergeCssFiles = async () => {
         await fs.appendFile(finalCssFile, content);
       }
     }
-    console.log('Merge completed.');
+    console.log('Merge completed');
   } catch (error) {
     console.error('Error:', error);
   }
